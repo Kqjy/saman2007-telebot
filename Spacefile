@@ -1,0 +1,12 @@
+# Spacefile Docs: https://go.deta.dev/docs/spacefile/v0
+v: 0
+micros:
+  - name: bot
+    src: ./dist/
+    engine: nodejs16
+    public_routes:
+      - "/*"
+    commands:
+      - npm install
+      - npm update
+    run: "node backend.js"
